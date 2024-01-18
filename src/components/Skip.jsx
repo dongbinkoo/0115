@@ -2,9 +2,14 @@ import React from 'react'
 
 const Skip = () => {
   return (
-    <div>
-      skip
-    </div>
+   <div id="skip">
+    <a href="#header">Header</a>
+    <a href="#intro">intro</a>
+    <a href="#skill">skill</a>
+    <a href="#site">site</a>
+    <a href="#port">port</a>
+    <a href="#contact">contact</a>
+   </div>
   )
 }
 

@@ -1,0 +1,114 @@
+#intro{
+    height: 100vh;
+}
+.intro_inner{
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    @media (max-width:960px) {
+        justify-content: center;
+
+    }
+
+    .intro_title{
+        font-size: 10vw;
+        line-height: 1;
+        font-weight: 800;
+        white-space: nowrap;
+        text-indent: -0.2vw;
+
+        @media (max-width:360px) {
+            display: none;
+        }
+    }
+    .intro_text{
+        width: 100%;
+        height: 40vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+      
+        .text{
+            font-size: 3vw;
+            line-height: 1;
+            font-weight: 900;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+            transition: 0.3s;
+
+        }
+        .img{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 30vh;
+            height: 30vh;
+            overflow: hidden;
+            border-radius: 50%;
+            transition: 0.3s;
+            filter: grayscale(100%);
+
+           
+        }
+        &:hover .img{
+            filter: grayscale(0%);
+            }
+        &:hover .text{
+            opacity: 0;
+        }
+      
+    }
+    .intro_line{
+        width: 100%;
+
+        .line{
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            margin-bottom: 0.5vw;
+
+            &:nth-of-type(1){height: 1px;}
+            &:nth-of-type(2){height: 2px;}
+            &:nth-of-type(3){height: 5px;}
+            &:nth-of-type(4){height: 9px;}
+            &:nth-of-type(5){height: 13px;}
+            &:nth-of-type(6){height: 17px;}
+            &:nth-of-type(7){height: 125px;}
+        }
+        &.bottom{
+            .line{
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: black;
+                margin-top: 0.5vw;
+                margin-bottom: 0;
+                display: none;
+                @media (max-width:960px) {
+                    display: block;
+                }
+                &:nth-of-type(1){height: 125px;}
+                &:nth-of-type(2){height: 17px;}
+                &:nth-of-type(3){height: 13px;}
+                &:nth-of-type(4){height: 9px;}
+                &:nth-of-type(5){height: 5px;}
+                &:nth-of-type(6){height: 2px;}
+                &:nth-of-type(7){height: 1px;}
+            }
+                
+        }
+    }
+  
+}
