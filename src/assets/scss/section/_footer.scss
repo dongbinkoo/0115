@@ -1,0 +1,91 @@
+#footer{}
+.footer__inner{
+    font-size: 12px;
+    .footer__text{
+        font-size: 12px;
+        text-transform: uppercase;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0 ;
+    }
+
+    .footer__info{
+        display: flex;
+        justify-content: space-between;
+        margin: 100px 0 ;
+
+        @media (max-width:960px){
+            flex-direction: column;
+        }
+        .left{
+            width: 40%;
+            @media (max-width:960px) {
+                width: 100%;
+                
+            }
+            .title{
+                border-top: 2px solid var(--black);
+                border-bottom: 2px solid var(--black);
+                padding: 20px 0;
+                text-transform: uppercase;
+                font-weight: 700;
+                transition: 0.5s;
+
+                &:hover{
+                    padding-left: 50px;
+                    font-weight: 900;
+                }
+            }
+            .desc{
+                font-size: 12px;
+                padding: 20px;
+
+                @media (max-width:960px) {
+                    margin-bottom: 40px;
+                    
+                }
+            }
+        }
+        .right{
+            width: 50%;
+            @media (max-width:960px) {
+                width: 100%;
+            }
+            h3{
+                border-top: 2px solid #000;
+                font-size: 10px;
+                margin-bottom: 40px;
+                padding-top: 10px;
+            }
+            ul{}
+            ul{
+                li{
+                   
+                    border-bottom: 1px sollid var(--black);
+                    a{
+                        display: inline-block;
+                        padding: 14px 0 ;
+                        white-space: nowrap;
+                    }
+                    em{
+                        font-size: 12px ;
+                        padding-left: 15px;
+                        opacity: 0;
+                        transition: 0.5s;
+                    }
+                    &:hover em{
+                     opacity: 1;   
+                    }
+                }
+            }
+        }
+    }
+    .footer__right{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+}
